@@ -1,0 +1,129 @@
+body{
+    background-image: url(../images/bg_aboutMe.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding: 0;
+}
+
+header{
+    position: relative;
+    padding-top: 72px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header h1{
+    margin-right: 70px;
+    width: 84px;
+    height: 35px;
+}
+
+.hwrap{
+    display: flex;
+    position: relative;
+}
+
+.gnb{
+    display: flex;
+    font-family: 'KOHINanumOTFB';
+    color: #fff;
+    /* position: absolute;
+    top: 110px;
+    left: 150px; */
+}
+
+.gnb li{
+    margin-right: 60px;
+    font-size: 20px;
+    padding-top: 12px;
+}
+
+.util{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 6px;
+}
+
+.util li{
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+/* main */
+main{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main h2{
+    color: #fff;
+    font-size: 70px;
+    font-family: arial;
+    margin-top: 72px;
+}
+
+main span{
+    width: 948px;
+    height: 1px;
+    border-top: 1px solid #fff;
+    display: block;
+}
+
+.con{
+    color: #fff;
+}
+
+.name{
+    margin-top: 60px;
+    display: flex;
+}
+
+.name h3{
+    font-family: 'GmarketSansMedium';
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-right: 20px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.name p{
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.birth{
+    font-family: 'GmarketSansMedium';
+    font-size: 20px;
+    margin-bottom: 65px;
+}
+
+.con div h4{
+    color: #00ffff;
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.con div p{
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 6px;
+}
+
+.box{
+    display: flex;
+}
+
+.space{
+    margin-right: 100px;
+}
+
+.email{
+    margin-top: 60px;
+}

@@ -1,0 +1,90 @@
+body{
+    background-image: url(../images/bg_main.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding: 0;
+}
+
+header{
+    position: relative;
+    padding-top: 72px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header h1{
+    margin-right: 70px;
+    width: 84px;
+    height: 35px;
+}
+
+.hwrap{
+    display: flex;
+    position: relative;
+}
+
+.gnb{
+    display: flex;
+    font-family: 'KOHINanumOTFB';
+    color: #fff;
+    /* position: absolute;
+    top: 110px;
+    left: 150px; */
+}
+
+.gnb li{
+    margin-right: 60px;
+    font-size: 20px;
+    padding-top: 12px;
+}
+
+.gnb li:hover{
+    color: #00ffff;
+    transition: all 0.5s;
+}
+
+.util{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 6px;
+}
+
+.util li{
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
+
+/* main */
+main{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main h2{
+    font-size: 100px;
+    color: #fff;
+    font-family: arial;
+    font-weight: 900;
+    margin-top: 100px;
+    /* margin-left: 160px; */
+}
+
+main h3{
+    font-size: 48px;
+    color: #fff;
+    font-family: arial;
+    margin-top: 70px;
+    font-weight: bold;
+}
+
+main p{
+    font-size: 32px;
+    color: #fff;
+    font-family: arial;
+    margin-top: 24px;
+    font-weight: lighter;
+}

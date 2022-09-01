@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/graphics.css">
+</head>
+<body>
+    <header>
+        <div class="hwrap">
+            <h1><a href="https://hyedoll.github.io/portfolio/" target="_blank"><img src="images/logo.png" alt=""></a></h1>
+       
+            <ul class="gnb">
+                 <li><a href="https://hyedoll.github.io/portfolio/graphics.html" target="_blank">GRAPHICS</a></li>
+                 <li><a href="https://hyedoll.github.io/portfolio/web.html" target="_blank">WEB & MEDIA</a></li>
+                 <li><a href="https://hyedoll.github.io/portfolio/about_me.html" target="_blank">ABOUT ME</a></li>
+            </ul><!--gnb-->
+     
+            <ul class="util">
+                 <li><a href="https://www.instagram.com/amor_y_trueno/" target="_blank"><img src="images/insta.png" alt=""></a></li>
+                 <li><a href="https://www.youtube.com/channel/UCXDR8GzHyroS4ZtNgvxeoQA" target="_blank"><img src="images/youtube.png" alt=""></a></li>
+             </ul><!--util-->
+        </div>
+    </header>
+
+    <main>
+        <!-- <a href="#"><p class="bigView">bigger view</p></a> -->
+
+        <div class="space">
+            <div class="box" data-img="view1.jpg" data-width="600">
+                <a href="#"><img src="images/graphics/gallery1.png" alt=""></a>
+               
+                <div class="txt">
+                    <h3>Green Day</h3>
+                    <p>일러스트를 이용해 그린 카페 포스터</p>
+                </div><!--txt-->
+            </div><!--box1-->
+
+            <div class="box" data-img="view2.jpg" data-width="600">
+                <a href="#"><img src="images/graphics/gallery2.png" alt=""></a>
+
+                <div class="txt">
+                    <h3>Weather & Animal Icon Set</h3>
+                    <p>일러스트를 이용해 그린 아이콘 세트</p>
+                </div><!--txt-->
+            </div><!--box2-->
+
+            <div class="box" data-img="view3.gif" data-width="700">
+                <a href="#"><img src="images/graphics/gallery3.png" alt=""></a>
+
+                <div class="txt">
+                    <h3>Penguin's Room</h3>
+                    <p>애니메이션 영화 월레스와 그로밋에 나오는 펭귄의 방</p>
+                </div><!--txt-->
+            </div><!--box3-->
+
+            <div class="box" data-img="view4-1.jpg" data-width="700">
+                <a href="#"><img src="images/graphics/gallery4.png" alt=""></a>
+
+                <div class="txt">
+                    <h3>Hoochoo</h3>
+                    <p>일러스트를 이용해 그린 친구의 강아지</p>
+                </div><!--txt-->
+            </div><!--box4-->
+
+            <div class="box" data-img="view5-1.jpg" data-width="1200">
+                <a href="#"><img src="images/graphics/gallery5.png" alt=""></a>
+
+                <div class="txt">
+                    <h3>Thumbnail Fanart</h3>
+                    <p>동물 아이콘과 크레이지 아케이드 맵을 활용해 그린 팬아트</p>
+                </div><!--txt-->
+            </div><!--box5-->
+
+            <div class="box" data-img="view6.jpg" data-width="700">
+                <a href="#"><img src="images/graphics/gallery6.png" alt=""></a>
+
+                <div class="txt">
+                    <h3>Airpot Case Banner</h3>
+                    <p>국립박물관 뮷즈의 에어팟 케이스 홍보 배너</p>
+                </div><!--txt-->
+            </div><!--box6-->
+
+            <div class="box" data-img="view7.gif" data-width="700">
+                <a href="#"><img src="images/graphics/gallery7.png" alt=""></a>
+
+                <div class="txt">
+                    <h3>Save The Earth</h3>
+                    <p>환경의 날 홍보 배너</p>
+                </div><!--txt-->
+            </div><!--box7-->
+
+            <div class="box" data-img="view8.jpg" data-width="700">
+                <a href="#"><img src="images/graphics/gallery8.png" alt=""></a>
+
+                <div class="txt">
+                    <h3>Dia De Los Muertos</h3>
+                    <p>멕시코 전통 축제 죽은 자들의 날 홍보 배너</p>
+                </div><!--txt-->
+            </div><!--box8-->
+
+            <div class="box" data-img="view9.jpg" data-width="700">
+                <a href="#"><img src="images/graphics/gallery9.png" alt=""></a>
+
+                <div class="txt">
+                    <h3>Eloise Bridgerton</h3>
+                    <p>넷플릭스 드라마 브리저튼 가족 중 엘로이즈 홍보 배너</p>
+                </div><!--txt-->
+            </div><!--box9-->
+        </div><!--space-->
+
+
+        <div class="view">
+            <figure><img></figure>
+    
+            <button class="close">close</button>
+            <!-- <button class="prev"><img src="images/arrowL.png" alt=""></button>
+            <button class="next"><img src="images/arrowR.png" alt=""></button> -->
+        </div><!--view-->
+    </main>
+
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        //box을 클릭했을 때
+        //1. view가 fadeIn
+        //2. view의 h3과 p에 각각 아이템의 h3과 p 출력
+        $('.view').hide();
+
+        $('.box').on('click', function(e){
+            e.preventDefault(); //a 새로고침 막기
+
+            $('.view').fadeIn();
+
+            let imgName = $(this).data('img');
+            let imgSrc = "images/graphics/";
+
+            $('.view').find('img').attr('src',imgSrc + imgName);
+
+            let imgWidth = $(this).data('width');
+                imgWidth = parseInt(imgWidth);
+
+                $('figure img').width(imgWidth);
+
+            let h3 = $(this).find('h3').text();
+            let p = $(this).find('p').text();
+            
+            $('.view').find('h3').text(h3);
+            $('.view').find('p').text(p);
+        })//item
+
+        //close 클릭하면
+        //1. view가 사라짐
+        $('.close').on('click', function(){
+
+            $('.view').fadeOut();
+            });
+    </script>
+</body>
+</html>
