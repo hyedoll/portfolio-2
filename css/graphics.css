@@ -221,3 +221,10 @@ figure iframe{
     transform: translateY(-50%);
     width: 50px;
 } */
+
+
+/* box7 */
+
+figure video{
+    width: 700px;
+}

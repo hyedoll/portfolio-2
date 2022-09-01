@@ -85,9 +85,10 @@
                 </div><!--txt-->
             </div><!--box6-->
 
-            <div class="box" data-img="view7.gif" data-width="700">
+            <div class="box box7" data-img="" data-width="700">
                 <a href="#"><img src="images/graphics/gallery7.png" alt=""></a>
-
+                <!-- <video src="images/graphics/view7.mp4"></video> -->
+                
                 <div class="txt">
                     <h3>Save The Earth</h3>
                     <p>환경의 날 홍보 배너</p>
@@ -117,7 +118,7 @@
         <div class="view">
             <figure><img></figure>
     
-            <button class="close">close</button>
+            <!-- <button class="close">close</button> -->
             <!-- <button class="prev"><img src="images/arrowL.png" alt=""></button>
             <button class="next"><img src="images/arrowR.png" alt=""></button> -->
         </div><!--view-->
@@ -141,6 +142,8 @@
             let imgName = $(this).data('img');
             let imgSrc = "images/graphics/";
 
+            $('figure').html('<img>');
+
             $('.view').find('img').attr('src',imgSrc + imgName);
 
             let imgWidth = $(this).data('width');
@@ -155,12 +158,30 @@
             $('.view').find('p').text(p);
         })//item
 
+        $('.box7').on('click', function(e){
+            e.preventDefault(); //a 새로고침 막기
+
+            $('.view').fadeIn();
+
+            let vid = 'images/graphics/view7.mp4'
+            // video 수정시 위 src 수정
+            let vidSrc = `<video autoplay muted src="${vid}"></video>`;
+
+            $('figure').html(vidSrc);
+
+            let h3 = $(this).find('h3').text();
+            let p = $(this).find('p').text();
+            
+            $('.view').find('h3').text(h3);
+            $('.view').find('p').text(p);
+        })//item
+
         //close 클릭하면
         //1. view가 사라짐
-        $('.close').on('click', function(){
+        $('.view').on('click', function(){
 
             $('.view').fadeOut();
-            });
+        });
     </script>
 </body>
 </html>
